@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h1 style="text-align: center"> Type anthing slowly</h1>
+<form>
+    <div value="hienthi" type="text" style="margin:0 auto;  height:400px; width:200px;">
+
+        <input id = "vanban" type="text" value="" style="height: 100px; width: 200px" onkeyup="hienchu();"/>
+    </div>
+</form>
+<body>
+
+</body>
+<script>
+    let mang= "NEVER ENOUGHT";
+    let dem =0;
+    function  hienchu() {
+        console.log('AAA');
+        if(dem<mang.length-1){
+         let a = document.getElementById("vanban").value;
+         a = a.substr(0, a.length -1 );
+        document.getElementById("vanban").value = a + mang.charAt(dem);
+        dem++;}
+        else {
+            document.getElementById("vanban").value="";
+            dem =0;
+        }
+    }
+</script>
+</html>
